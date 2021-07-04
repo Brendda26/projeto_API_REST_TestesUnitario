@@ -25,7 +25,7 @@ public class CervejaControllerDocs {
             @ApiResponse(code = 201, message = "Success beer creation"),
             @ApiResponse(code = 400, message = "Missing required fields or wrong field range value.")
     })
-    CervejaDTO createBeer(CervejaDTO cervejaDTO) throws CervejaAlreadyRegisteredException;
+    CervejaDTO createCerveja(CervejaDTO cervejaDTO) throws CervejaAlreadyRegisteredException;
 
     @ApiOperation(value = "Returns beer found by a given name")
     @ApiResponses(value = {

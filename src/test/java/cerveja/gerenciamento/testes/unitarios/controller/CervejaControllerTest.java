@@ -56,7 +56,7 @@ public class CervejaControllerTest {
         // then
         mockMvc.perform(post(BEER_API_URL_PATH)
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(beerDTO)))
+                .content(asJsonString(cervejaDTO)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.name", is(cervejaDTO.getName())))
                 .andExpect(jsonPath("$.brand", is(cervejaDTO.getBrand())))

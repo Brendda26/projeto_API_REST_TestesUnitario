@@ -1,5 +1,6 @@
 package cerveja.gerenciamento.testes.unitarios.builder;
 
+import cerveja.gerenciamento.testes.unitarios.entity.Fornecedora;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -28,12 +29,16 @@ public class CervejaDTOBuilder {
     @Builder.Default
     private CervejaType type = CervejaType.LAGER;
 
+    @Builder.Default
+    private Fornecedora fornecedora =  Fornecedora.builder();
+
     public CervejaDTO toCervejaDTO() {
         return new CervejaDTO(id,
                 name,
                 brand,
                 max,
                 quantity,
-                type);
+                type,
+                fornecedora);
     }
 }
